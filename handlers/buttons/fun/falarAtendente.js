@@ -10,7 +10,7 @@ async function handleTalkAssistant(client, message) {
     const num = supNumbers[index];
     await client.sendText(
       num,
-      `O número ${message.from} solicitou atendimento pessoal`
+      `O número wa.me/+${message.from.replace('@c.us','')} solicitou atendimento pessoal`
     );
   }
 }
