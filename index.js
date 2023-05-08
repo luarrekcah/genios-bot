@@ -9,7 +9,13 @@ venom
     updatesLog: true,
     logQR: true,
   })
-  .then((client) => start(client))
+  .then((client) => {
+    try {
+      start(client);
+    } catch (error) {
+      console.log(error);
+    }
+  })
   .catch((erro) => {
     console.log(erro);
   });

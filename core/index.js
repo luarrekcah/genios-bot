@@ -8,7 +8,8 @@ async function start(client) {
   client.onMessage(async (message) => {
     if (
       message.fromMe ||
-      message.isGroupMsg
+      message.isGroupMsg ||
+      message.from === "status@broadcast"
     ) {
       return;
     }
